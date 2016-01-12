@@ -1,0 +1,23 @@
+*** AudioService.smali	2016-01-12 13:11:52.480716448 +0700
+--- AudioService.smali	2016-01-12 13:14:16.220809082 +0700
+***************
+*** 9984,9989 ****
+      const/4 p1, 0x0
+  
+      :cond_2
+      invoke-virtual {p0}, Landroid/media/AudioService;->getRingerMode()I
+  
+      move-result v0
+--- 10058,10069 ----
+      const/4 p1, 0x0
+  
+      :cond_2
++     iget-object v0, p0, Landroid/media/AudioService;->mContext:Landroid/content/Context;
++ 
++     invoke-static {v0, p1}, Lmiui/util/AudioManagerHelper;->getValidatedRingerMode(Landroid/content/Context;I)I
++ 
++     move-result p1
++ 
+      invoke-virtual {p0}, Landroid/media/AudioService;->getRingerMode()I
+  
+      move-result v0

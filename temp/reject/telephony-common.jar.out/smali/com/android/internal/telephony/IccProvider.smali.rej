@@ -1,0 +1,19 @@
+*** IccProvider.smali	2016-01-12 13:11:00.782578940 +0700
+--- IccProvider.smali	2016-01-12 13:13:23.131367586 +0700
+***************
+*** 4,10 ****
+  
+  
+  # static fields
+! .field private static final ADDRESS_BOOK_COLUMN_NAMES:[Ljava/lang/String;
+  
+  .field private static final ADN:I = 0x1
+  
+--- 4,10 ----
+  
+  
+  # static fields
+! .field public static final ADDRESS_BOOK_COLUMN_NAMES:[Ljava/lang/String;
+  
+  .field private static final ADN:I = 0x1
+  

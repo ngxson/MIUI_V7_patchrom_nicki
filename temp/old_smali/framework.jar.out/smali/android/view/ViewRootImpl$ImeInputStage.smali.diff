@@ -1,0 +1,22 @@
+*** ./smali/android/view/ViewRootImpl$ImeInputStage.smali	2016-01-12 13:12:21.642128171 +0700
+--- /home/ngxson/nicki/miui/temp/new_smali/framework.jar.out/./smali/android/view/ViewRootImpl$ImeInputStage.smali	2016-01-12 13:14:46.417702795 +0700
+***************
+*** 104,109 ****
+--- 104,120 ----
+      move-result v2
+  
+      .local v2, "result":I
++      const/16 v3, 0x63
++ 
++      if-ne v2, v3, :cond_miui_0
++ 
++      const/4 v3, 0x0
++ 
++      return v3
++ 
++     :cond_miui_0
++     const/4 v3, 0x1
++ 
+      if-ne v2, v3, :cond_0
+  
+      .end local v0    # "event":Landroid/view/InputEvent;
